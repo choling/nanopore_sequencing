@@ -1,9 +1,7 @@
 # nanopore_sequencing
 Repeoducing a nanopore sequencing experiment by following the workflow mentioned in the reference paper.
 The basecalled fast5 reads could be dowloaded from gigaDB. The basic stats/metrics could be obtained by using Poretools. Poretools could also convert fast5 reads to fasta or fastq format for alignment. And then the reads were aligned to reference genome (Escherichia coli str. K-12 substr. MG1655). The following is the pipeline.
-<a href="https://draw.io/">
-  <img src="https://www.draw.io/#G0B-J6JWlTPkwXSEd3Z3Y3djNONlE" width="100%" height="432">
-</a> 
+<img width="714" alt="pipeline" src="https://cloud.githubusercontent.com/assets/15060044/24547734/dbdf0746-1643-11e7-8c4f-e5647f71d855.png"> 
 
 ### Reference paper
 A reference bacterial genome dataset generated on the MinION™ portable single-molecule nanopore sequencer
