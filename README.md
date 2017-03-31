@@ -1,4 +1,6 @@
 # nanopore_sequencing
+Repeoducing a nanopore sequencing experiment by following the workflow mentioned in the reference paper.
+The basecalled fast5 reads could be dowloaded from gigaDB.
 
 ### Reference paper
 A reference bacterial genome dataset generated on the MinION™ portable single-molecule nanopore sequencer
