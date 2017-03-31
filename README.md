@@ -4,9 +4,7 @@ The basecalled fast5 reads could be dowloaded from gigaDB. The basic stats/metri
 <img width="714" alt="pipeline" src="https://cloud.githubusercontent.com/assets/15060044/24547734/dbdf0746-1643-11e7-8c4f-e5647f71d855.png"> 
 
 ### Reference paper
-A reference bacterial genome dataset generated on the MinION™ portable single-molecule nanopore sequencer
-##### Links
-<https://academic.oup.com/gigascience/article-lookup/doi/10.1186/2047-217X-3-22>
+[A reference bacterial genome dataset generated on the MinION™ portable single-molecule nanopore sequencer] (https://academic.oup.com/gigascience/article-lookup/doi/10.1186/2047-217X-3-22)
 #### Data 
 <http://gigadb.org/dataset/100102>
 ###reference genome: Escherichia coli str. K-12 substr. MG1655
