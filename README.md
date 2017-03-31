@@ -1,8 +1,8 @@
 # nanopore_sequencing
 Repeoducing a nanopore sequencing experiment by following the workflow mentioned in the reference paper.
 The basecalled fast5 reads could be dowloaded from gigaDB. The basic stats/metrics could be obtained by using Poretools. Poretools could also convert fast5 reads to fasta or fastq format for alignment. And then the reads were aligned to reference genome (Escherichia coli str. K-12 substr. MG1655). The following is the pipeline.
-<a href="https://github.com/choling/nanopore_sequencing">
-  <img src="https://github.com/choling/nanopore_sequencing/blob/master/FYP_Diagram.svg" width="50%" height="432">
+<a href="https://draw.io/">
+  <img src="https://www.draw.io/#G0B-J6JWlTPkwXSEd3Z3Y3djNONlE" width="100%" height="432">
 </a> 
 
 ### Reference paper
