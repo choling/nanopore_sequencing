@@ -1,0 +1,38 @@
+files	total reads	47195
+files	total base-called reads	43656
+2D_hq	total reads	1602
+2D_hq	total base pairs	9579014
+2D_hq	mean	5979.41
+2D_hq	median	5131
+2D_hq	min	130
+2D_hq	max	47422
+2D_hq	N25	10872
+2D_hq	N50	7857
+2D_hq	N75	5167
+complement	total reads	23338
+complement	total base pairs	125026724
+complement	mean	5357.22
+complement	median	4783
+complement	min	8
+complement	max	115979
+complement	N25	9796
+complement	N50	7196
+complement	N75	4947
+template	total reads	43656
+template	total base pairs	272073353
+template	mean	6232.21
+template	median	5039
+template	min	5
+template	max	85512
+template	N25	13967
+template	N50	9224
+template	N75	6107
+twodirections	total reads	20087
+twodirections	total base pairs	131443020
+twodirections	mean	6543.69
+twodirections	median	6049
+twodirections	min	130
+twodirections	max	47422
+twodirections	N25	11228
+twodirections	N50	8479
+twodirections	N75	5916
