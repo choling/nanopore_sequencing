@@ -1,0 +1,48 @@
+
+MSc FYP
+Target: reproduce the bioinformatics analysis
+data source(Ecoli_R73): http://gigadb.org/dataset/100102
+data source(Ecoli_R7_NONI): ftp://ftp.sra.ebi.ac.uk/vol1/ERA362/ERA362836/oxfordnanopore_native/Ecoli_R7_NONI.tgz
+paper:https://gigascience.biomedcentral.com/articles/10.1186/2047-217X-3-22
+aligner(LAST): http://last.cbrc.jp/
+ecoli MG1655 reference source: https://www.ncbi.nlm.nih.gov/nuccore/U00096.3
+BWA and LAST has been tunned to work with nanopore reads:https://nanoporetech.com/publications/bwa-and-last-have-been-tuned-work-nanopore-reads
+1. download the raw read files(fast5) and obtain the raw stats
+poretools stats --full-tsv
+poretools hist
+poretools yield-plot reads
+tar -zvxf Ecoli_R7_NONI.tgz
+tar -zvxf Ecoli_R73.tgz
+
+2.convert the raw reads to fasta
+poretool fasta --type (fwd/rev/2D/2D --high-quality)
+
+3.install last(verions 719) from bioconda
+conda config --add channels conda-forge
+conda config --add channels defaults
+conda config --add channels r
+conda config --add channels bioconda
+conda install last
+conda update last
+
+4.align the raw reads to reference MG1655 using LAST or BWA mem -x ont2d
+4.1 build the database
+lastdb -uNEAR -R01 ecolidb MG1655.fasta
+4.2 align the reads with the databases
+lastal -P48 -r1 -a1 -b1 -q1/2 ecolidb nanopore.reads.fasta > myalns.maf
+r:match score
+a:gap opening penalty
+b:gap extension penalty
+q:nucleotide subsititution penalty
+lastal ecolidb nanopore.reads.fasta > myalns.maf
+#bwa index MG1655.fasta
+#bwa mem -x ont2d -t 24 MG1655.fasta nanopore.reads.fasta > aligned.sam
+
+5.Convert maf to bam 
+python maf-convert.py sam ../Ecoli_R73/ecoli_r73.complement.q2.maf | samtools view -T ../Ecoli.K12.MG1655.fasta -bS - | samtools sort > ../Ecoli_R73/ecoli_r73.complement.q2.sorted.bam 2> ../err.txt
+
+6.Extract the percent identity
+python count-errors.py ../Ecoli_R73/ecoli_r73.complement.q1.sorted.bam > ../Ecoli_R73/ecoli_r73.complement.q1.bam.profile.txt 2> ../err.txt
+
+7. Plot graph using R in windows
+C:\Program Files\R\R-3.3.2\bin>Rscript.exe C:\Users\ken\Desktop\MinION_result\Ecoli_R7\plot-alignment-stats2.R C:\Users\ken\Desktop\MinION_result\Ecoli_R7\highquality2directionreads.fa.bam.profile.txt
