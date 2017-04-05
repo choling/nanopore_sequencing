@@ -2,7 +2,7 @@
   <description>for compressed folders/files</description>
   <command interpreter="python">fast5_unzip.py $input $output</command>
   <inputs>
-    <param format="fasta" name="input" type="data" label="Source file"/>
+    <param format="tabular" name="input" type="data" label="Source file"/>
   </inputs>
   <outputs>
     <data format="fast5" name="output" />
