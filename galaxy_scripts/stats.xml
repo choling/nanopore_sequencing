@@ -1,4 +1,4 @@
-<tool id="Get read size stats for a set of FAST5 files" name="Get statistics of basecalled fast5" version="0.1.0">
+<tool id="Get read size stats for a set of FAST5 files" name="Get raw stats of basecalled fast5" version="0.1.0">
   <description>for all reads in a folder</description>
   <command interpreter="python">stats.xml $input $output</command>
   <inputs>
