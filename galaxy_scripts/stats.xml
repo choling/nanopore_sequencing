@@ -10,7 +10,7 @@
 
   <tests>
     <test>
-      <param name="input" value="fast5_stats.fa"/>
+      <param name="input" value="input.fast5"/>
       <output name="out_file1" file="fast5_stats.txt"/>
     </test>
   </tests>
