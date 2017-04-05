@@ -1,0 +1,22 @@
+<tool id="Get read size stats for a set of FAST5 files" name="Get statistics of basecalled fast5" version="0.1.0">
+  <description>for each sequence in a file</description>
+  <command interpreter="python">stats.xml $input $output</command>
+  <inputs>
+    <param format="fast5" name="input" type="data" label="Source file"/>
+  </inputs>
+  <outputs>
+    <data format="tabular" name="output" />
+  </outputs>
+
+  <tests>
+    <test>
+      <param name="input" value="fast5_stats.fa"/>
+      <output name="out_file1" file="fast5_stats.txt"/>
+    </test>
+  </tests>
+
+  <help>
+This tool gets raw stats from FAST5 file (s).
+  </help>
+
+</tool>
