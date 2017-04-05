@@ -1,5 +1,5 @@
 <tool id="Get read size stats for a set of FAST5 files" name="Get statistics of basecalled fast5" version="0.1.0">
-  <description>for each sequence in a file</description>
+  <description>for all reads in a folder</description>
   <command interpreter="python">stats.xml $input $output</command>
   <inputs>
     <param format="fast5" name="input" type="data" label="Source file"/>
