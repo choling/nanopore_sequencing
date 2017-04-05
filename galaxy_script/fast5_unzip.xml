@@ -1,1 +1,22 @@
+<tool id="unzip files/folders" name="Decompress folders/files" version="0.1.0">
+  <description>for compressed folders/files</description>
+  <command interpreter="python">fast5_unzip.py $input $output</command>
+  <inputs>
+    <param format="fasta" name="input" type="data" label="Source file"/>
+  </inputs>
+  <outputs>
+    <data format="fast5" name="output" />
+  </outputs>
 
+  <tests>
+    <test>
+      <param name="input" value="compresed.fast5.zip"/>
+      <output name="output" file="decompressed.fast5"/>
+    </test>
+  </tests>
+
+  <help>
+This tool decompress fast5 from zipped files.
+  </help>
+
+</tool>
