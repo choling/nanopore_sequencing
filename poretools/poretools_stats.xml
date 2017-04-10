@@ -1,0 +1,49 @@
+<tool id="poretools_stats" name="Extract raw stat from the basecalled nanopore reads" version="0.1.0">
+    <requirements>
+        <requirement type="package" version="0.6.1a1">poretools</requirement>
+    </requirements>
+    <stdio>
+        <exit_code range="1:" />
+    </stdio>
+    <command><![CDATA[
+        poretools stats $input1/ > $input1_stats.txt
+    ]]></command>
+    <inputs>
+        <param type="data" name="input1" format="" />
+    </inputs>
+    <outputs>
+        <data name="output1" format="txt" from_work_dir="test_ecoli_R73_stats.txt" />
+    </outputs>
+    <tests>
+        <test>
+            <param name="input1" value="test_ecoli_R73"/>
+            <output name="output1" file="test_ecoli_R73_stats.txt"/>
+        </test>
+    </tests>
+    <help><![CDATA[
+        usage: poretools stats [-h] [-q] [--type STRING] [--full-tsv] [--group GROUP]
+                       FILES [FILES ...]
+
+positional arguments:
+  FILES          The input FAST5 files.
+
+optional arguments:
+  -h, --help     show this help message and exit
+  -q, --quiet    Do not output warnings to stderr
+  --type STRING  Which type of FASTQ entries should be reported? Def.=all
+  --full-tsv     Verbose output in tab-separated format.
+  --group GROUP  Base calling group serial number to extract, default 000
+
+    ]]></help>
+    <citations>
+        <citation type="bibtex">
+@misc{githubporetools,
+  author = {Nicholas J. , Loman}, {Aaron R. , Quinlan},
+  year = {2014},
+  title = {poretools},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  url = {https://github.com/arq5x/poretools},
+}</citation>
+    </citations>
+</tool>
