@@ -6,10 +6,10 @@
         <exit_code range="1:" />
     </stdio>
     <command><![CDATA[
-        poretools stats $input1/ > $input1_stats.txt
+        poretools stats $input1/ > $output1_stats.txt
     ]]></command>
     <inputs>
-        <param type="data" name="input1" format="fast5" />
+        <param type="data" name="input1" format="h5" />
     </inputs>
     <outputs>
         <data name="output1" format="txt" from_work_dir="test_ecoli_R73_stats.txt" />
