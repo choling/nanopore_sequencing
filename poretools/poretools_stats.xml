@@ -6,7 +6,7 @@
         <exit_code range="1:" />
     </stdio>
     <command><![CDATA[
-        poretools stats "$input1/" > "$output1"
+        poretools stats "$input1" > "$output1"
     ]]></command>
     <inputs>
         <param type="data" name="input1" format="fast5" />
