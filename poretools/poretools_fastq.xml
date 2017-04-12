@@ -1,0 +1,43 @@
+<tool id="poretools_fastq" name="Extract sequences in FASTQ format" version="0.1.0">
+    <requirements>
+        <requirement type="package" version="0.6.0">poretools</requirement>
+    </requirements>
+    <stdio>
+        <exit_code range="1:" />
+    </stdio>
+    <command><![CDATA[
+        poretools fastq "$input1" > "$output1".fastq
+    ]]></command>
+    <inputs>
+        <param type="data" name="input1" format="fast5" />
+    </inputs>
+    <outputs>
+        <data name="output1" format="fastq" from_work_dir="test_ecoli_R73" />
+    </outputs>
+    <tests>
+        <test>
+            <param name="input1" value="test_ecoli_R73"/>
+            <output name="output1" file="test_ecoli_R73.fastq"/>
+        </test>
+    </tests>
+    <help><![CDATA[
+        usage: poretools fastq [-h] [-q] [--type STRING] [--start START_TIME]
+                       [--end END_TIME] [--min-length MIN_LENGTH]
+                       [--max-length MAX_LENGTH] [--high-quality]
+                       [--normal-quality] [--group GROUP]
+                       FILES [FILES ...]
+poretools fastq: error: too few arguments
+
+    ]]></help>
+    <citations>
+        <citation type="bibtex">
+@misc{githubporetools,
+  author = {Nicholas J. , Loman}, {Aaron R. , Quinlan},
+  year = {2014},
+  title = {poretools},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  url = {https://github.com/arq5x/poretools},
+}</citation>
+    </citations>
+</tool>
