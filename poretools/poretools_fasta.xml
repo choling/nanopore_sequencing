@@ -1,0 +1,43 @@
+<tool id="poretools_fasta" name="Extract sequences in FASTA format" version="0.1.0">
+    <requirements>
+        <requirement type="package" version="0.6.0">poretools</requirement>
+    </requirements>
+    <stdio>
+        <exit_code range="1:" />
+    </stdio>
+    <command><![CDATA[
+        poretools fasta "$input1" > "$input1".fasta
+    ]]></command>
+    <inputs>
+        <param type="data" name="input1" format="" />
+    </inputs>
+    <outputs>
+        <data name="output1" format="fasta" from_work_dir="test_ecoli_R73.fasta" />
+    </outputs>
+    <tests>
+        <test>
+            <param name="input1" value="test_ecoli_R73"/>
+            <output name="output1" file="test_ecoli_R73.fasta"/>
+        </test>
+    </tests>
+    <help><![CDATA[
+        usage: poretools fasta [-h] [-q] [--type STRING] [--start START_TIME]
+                       [--end END_TIME] [--min-length MIN_LENGTH]
+                       [--max-length MAX_LENGTH] [--high-quality]
+                       [--normal-quality] [--group GROUP]
+                       FILES [FILES ...]
+poretools fasta: error: too few arguments
+
+    ]]></help>
+    <citations>
+        <citation type="bibtex">
+@misc{githubporetools,
+  author = {LastTODO, FirstTODO},
+  year = {TODO},
+  title = {poretools},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  url = {https://github.com/arq5x/poretools},
+}</citation>
+    </citations>
+</tool>
