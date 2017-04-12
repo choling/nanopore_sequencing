@@ -1,0 +1,42 @@
+<tool id="poretools_hist" name="Plot a histogram of read sizes from a set of FAST5 files" version="0.1.0">
+    <requirements>
+        <requirement type="package" version="0.6.0">poretools</requirement>
+    </requirements>
+    <stdio>
+        <exit_code range="1:" />
+    </stdio>
+    <command><![CDATA[
+        poretools hist "$input1" --saveas "$output1"
+    ]]></command>
+    <inputs>
+        <param type="data" name="input1" format="" />
+    </inputs>
+    <outputs>
+        <data name="output1" format="pdf" />
+    </outputs>
+    <tests>
+        <test>
+            <param name="input1" value="test_ecoli_R73"/>
+            <output name="output1" file="test_r73_hist.pdf"/>
+        </test>
+    </tests>
+    <help><![CDATA[
+        usage: poretools hist [-h] [-q] [--min-length MIN_LENGTH]
+                      [--max-length MAX_LENGTH] [--num-bins NUM_BINS]
+                      [--saveas STRING] [--theme-bw] [--watch]
+                      FILES [FILES ...]
+poretools hist: error: too few arguments
+
+    ]]></help>
+    <citations>
+        <citation type="bibtex">
+@misc{githubporetools,
+  author = {LastTODO, FirstTODO},
+  year = {TODO},
+  title = {poretools},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  url = {https://github.com/arq5x/poretools},
+}</citation>
+    </citations>
+</tool>
