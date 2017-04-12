@@ -31,8 +31,8 @@ poretools hist: error: too few arguments
     <citations>
         <citation type="bibtex">
 @misc{githubporetools,
-  author = {LastTODO, FirstTODO},
-  year = {TODO},
+  author = {Nicholas J. , Loman}, {Aaron R. , Quinlan},
+  year = {2014},
   title = {poretools},
   publisher = {GitHub},
   journal = {GitHub repository},
