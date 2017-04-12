@@ -12,7 +12,7 @@
         <param type="data" name="input1" format="fast5" />
     </inputs>
     <outputs>
-        <data name="output1" format="txt" />
+        <data name="output1" format="txt" from_work_dir="test_ecoli_R73/" />
     </outputs>
     <tests>
         <test>
