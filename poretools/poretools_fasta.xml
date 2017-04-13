@@ -9,10 +9,10 @@
         poretools fasta "$input1" > "$output1".fasta
     ]]></command>
     <inputs>
-        <param type="data" name="input1" format="fast5" />
+        <param type="data" name="input1" format="h5" />
     </inputs>
     <outputs>
-        <data name="output1" format="fasta" from_work_dir="test_ecoli_R73/" />
+        <data name="output1" format="fasta" />
     </outputs>
     <tests>
         <test>
