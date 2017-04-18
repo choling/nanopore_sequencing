@@ -6,7 +6,7 @@
         <exit_code range="1:" />
     </stdio>
     <command><![CDATA[
-        poretools hist "$input1" --saveas "$output1.pdf"
+        poretools hist "$input1" --saveas "test.pdf" | mv "test.pdf" "$output1"
     ]]></command>
     <inputs>
         <param type="data" name="input1" format="h5" />
