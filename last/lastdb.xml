@@ -1,0 +1,46 @@
+<tool id="lastdb" name="Create reference database for last alignment" version="0.1.0">
+    <requirements>
+        <requirement type="package" version="849">last</requirement>
+    </requirements>
+    <stdio>
+        <exit_code range="1:" />
+    </stdio>
+    <command><![CDATA[
+        lastdb -uNEAR -R01 ecolidb ecoli_MG1655.fasta
+    ]]></command>
+    <inputs>
+        <param type="data" name="input1" format="" />
+    </inputs>
+    <outputs>
+        <data name="output1" format="data" from_work_dir="ecoli_ref" />
+    </outputs>
+    <tests>
+        <test>
+            <param name="input1" value="test_data"/>
+            <output name="output1" file="ecoli_ref"/>
+        </test>
+    </tests>
+    <help><![CDATA[
+        lastdb: please give me an output name and sequence file(s)
+
+Usage: lastdb [options] output-name fasta-sequence-file(s)
+Prepare sequences for subsequent alignment with lastal.
+
+Main Options:
+-h, --help: show all options and their default settings, and exit
+-p: interpret the sequences as proteins
+-R: repeat-marking options (default=10)
+-c: soft-mask lowercase letters (in reference *and* query sequences)
+-u: seeding scheme (default: YASS for DNA, else exact-match seeds)
+
+    ]]></help>
+    <citations>
+        <citation type="bibtex">
+@misc{renameTODO,
+  author = {Szymon M. Kiełbasa, Raymond Wan, Kengo Sato, Paul Horton and Martin C. Frith},
+  year = {2011},
+  title = {Adaptive seeds tame genomic sequence comparison},
+  url = {http://last.cbrc.jp/},
+}</citation>
+    </citations>
+</tool>
