@@ -6,7 +6,7 @@
         <exit_code range="1:" />
     </stdio>
     <command><![CDATA[
-        lastdb -uNEAR -R01 ecolidb "$$input1"
+        lastdb -uNEAR -R01 ecolidb "$input1"
     ]]></command>
     <inputs>
         <param type="data" name="input1" format="fasta" />
