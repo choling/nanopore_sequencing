@@ -1,0 +1,46 @@
+<tool id="lastal" name="last align fasta/fastq to indexed reference" version="0.1.0">
+    <requirements>
+        <requirement type="package" version="849">last</requirement>
+    </requirements>
+    <stdio>
+        <exit_code range="1:" />
+    </stdio>
+    <command><![CDATA[
+        lastal -r1 -a1 -b1 -q1 "$input1" "$input2" > "$output1"
+    ]]></command>
+    <inputs>
+	<param type="data" name="input" format="data" />
+        <param type="data" name="input2" format="fasta" />
+    </inputs>
+    <outputs>
+        <data name="output1" format="maf" />
+    </outputs>
+    <tests>
+        <test>
+            <param name="input1" value="test_data"/>
+            <output name="output1" file="test_ecoli_R73.maf"/>
+        </test>
+    </tests>
+    <help><![CDATA[
+        lastal: please give me a database name and sequence file(s)
+
+Usage: lastal [options] lastdb-name fasta-sequence-file(s)
+Find and align similar sequences.
+
+Cosmetic options:
+-h, --help: show all options and their default settings, and exit
+-V, --version: show version information, and exit
+-v: be verbose: write messages about what lastal is doing
+-f: output format: TAB, MAF, BlastTab, BlastTab+ (default=MAF)
+
+    ]]></help>
+    <citations>
+        <citation type="bibtex">
+@misc{rename,
+  author = {Szymon M. Kiełbasa, Raymond Wan, Kengo Sato, Paul Horton and Martin C. Frith},
+  year = {2011},
+  title = {Adaptive seeds tame genomic sequence comparison},
+  url = {http://last.cbrc.jp/},
+}</citation>
+    </citations>
+</tool>
