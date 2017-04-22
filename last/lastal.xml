@@ -6,7 +6,7 @@
         <exit_code range="1:" />
     </stdio>
     <command><![CDATA[
-        lastal -r1 -a1 -b1 -q1 "$input1" "$input2" > "$output1"
+        sh /home/ec2-user/galaxy/tools/nanopore_sequencing/last/last_db_al.sh "$input1" "$input2" > "$output1"
     ]]></command>
     <inputs>
 	<param type="data" name="input1" format="data" />
