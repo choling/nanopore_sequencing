@@ -1,4 +1,4 @@
-<tool id="lastal" name="last align fasta/fastq to indexed reference" version="0.1.0">
+<tool id="lastal" name="last create reference index + align fasta/fastq" version="0.1.0">
     <requirements>
         <requirement type="package" version="849">last</requirement>
     </requirements>
