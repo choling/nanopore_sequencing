@@ -36,7 +36,7 @@ Main Options:
     ]]></help>
     <citations>
         <citation type="bibtex">
-@misc{renameTODO,
+@misc{rename,
   author = {Szymon M. Kiełbasa, Raymond Wan, Kengo Sato, Paul Horton and Martin C. Frith},
   year = {2011},
   title = {Adaptive seeds tame genomic sequence comparison},
