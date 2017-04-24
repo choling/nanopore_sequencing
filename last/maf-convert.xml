@@ -1,0 +1,48 @@
+<tool id="maf-convert" name="Covert maf to sam" version="0.1.0">
+    <description>Convert aligned maf to sam format</description>
+    <requirements>
+        <requirement type="package">maf-convert.py</requirement>
+    </requirements>
+    <stdio>
+        <exit_code range="1:" />
+    </stdio>
+    <command><![CDATA[
+        python maf-convert.py sam "$input1" > "$output1"
+    ]]></command>
+    <inputs>
+        <param type="data" name="input1" format="maf" />
+    </inputs>
+    <outputs>
+        <data name="output1" format="sam" from_work_dir="test_ecoli_R73.sam" />
+    </outputs>
+    <tests>
+        <test>
+            <param name="input1" value="test_ecoli_R73.maf"/>
+            <output name="output1" file="test_ecoli_R73.sam"/>
+        </test>
+    </tests>
+    <help><![CDATA[
+        Usage: 
+  maf-convert.py --help
+  maf-convert.py axt mafFile(s)
+  maf-convert.py blast mafFile(s)
+  maf-convert.py html mafFile(s)
+  maf-convert.py psl mafFile(s)
+  maf-convert.py sam mafFile(s)
+  maf-convert.py tab mafFile(s)
+
+maf-convert.py: error: I need a format-name and some MAF alignments
+
+    ]]></help>
+    <citations>
+        <citation type="bibtex">
+@misc{githubnanopore-scripts,
+  author = {Quinlan, Aaron},
+  year = {2014},
+  title = {nanopore-scripts},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  url = {https://github.com/arq5x/nanopore-scripts},
+}</citation>
+    </citations>
+</tool>
