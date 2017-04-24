@@ -7,7 +7,7 @@
         <exit_code range="1:" />
     </stdio>
     <command><![CDATA[
-        python maf-convert.py sam "$input1" > "$output1"
+        python /home/ec2-user/galaxy/tools/nanopore_sequencing/last/maf-convert.py sam "$input1" > "$output1"
     ]]></command>
     <inputs>
         <param type="data" name="input1" format="maf" />
