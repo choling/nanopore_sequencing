@@ -7,7 +7,7 @@
         <exit_code range="1:" />
     </stdio>
     <command><![CDATA[
-        poretools fastq "$input1" > "$output1"
+        poretools fastq #for $input in $input1# ${input} #end for end# >> $output1
     ]]></command>
     <inputs>
         <param type="data" name="input1" format="h5" />
