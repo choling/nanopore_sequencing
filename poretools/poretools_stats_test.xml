@@ -7,7 +7,7 @@
         <exit_code range="1:" />
     </stdio>
     <command><![CDATA[
-        poretools stats poretools stats #for $input in $input1# ${input} #end for end# >> $output1
+        poretools stats #for $input in $input1# ${input} #end for end# >> $output1
     ]]></command>
     <inputs>
         <param name="input1" type="data" multiple="true" format="h5" label="Fast5 collection" />
