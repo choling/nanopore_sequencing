@@ -10,8 +10,8 @@
         sh /home/ec2-user/galaxy/tools/nanopore_sequencing/last/last_db_al.sh "$input1" "$input2" > "$output1"
     ]]></command>
     <inputs>
-	<param type="data" name="input1" format="data" />
-        <param type="data" name="input2" format="fasta" />
+	<param type="data" name="input1" format="data" label="reference genome" />
+        <param type="data" name="input2" format="fasta" label="fasta file" />
     </inputs>
     <outputs>
         <data name="output1" format="maf" />
