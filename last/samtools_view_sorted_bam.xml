@@ -7,10 +7,10 @@
         <exit_code range="1:" />
     </stdio>
     <command><![CDATA[
-        sh /home/ec2-user/galaxy/tools/nanopore_sequencing/last/sam-to-sorted-bam.sh > $output1
+        sh /home/ec2-user/galaxy/tools/nanopore_sequencing/last/sam-to-sorted-bam.sh "$input1" "$input2" > "$output1"
     ]]></command>
     <inputs>
-	<param type="data" name="input1" format="fasta" label="reference genome" />
+	<param type="data" name="input1" format="data" label="reference genome" />
 	<param type="data" name="input2" format="sam" label="sam file" />
     </inputs>
     <outputs>
