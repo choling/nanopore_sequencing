@@ -1,5 +1,5 @@
-<tool id="samtools_view" name="Sam-to-sorted-Bam" version="0.1.0">
-    <description>Convert sam to sorted.bam</description>
+<tool id="sam-bam conversion" name="SAM-to-sorted-BAM" version="0.1.0">
+    <description>Convert sam to sorted bam</description>
     <requirements>
         <requirement type="package" version="1.4">samtools</requirement>
     </requirements>
@@ -20,7 +20,9 @@
 	<test>
 	    <param name="input1" value="ecoli_MG1655.fasta" />
 	    <param name="input2" value="test_ecoli_R73.sam" />
-	    <param name="output1" file="test_ecoli_R73.bam" />
+	    <param name="output1" file="test_ecoli_R73.sorted.bam" />
+	</test>
+    </tests>
     <help><![CDATA[
         
 Usage: samtools view [options] <in.bam>|<in.sam>|<in.cram> [region ...]
