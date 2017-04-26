@@ -1,5 +1,5 @@
-<tool id="samtools_view" name="Samtools view" version="0.1.0">
-    <description>Convert sam to bam</description>
+<tool id="samtools_view" name="Sam-to-sorted-Bam" version="0.1.0">
+    <description>Convert sam to sorted.bam</description>
     <requirements>
         <requirement type="package" version="1.4">samtools</requirement>
     </requirements>
@@ -7,7 +7,7 @@
         <exit_code range="1:" />
     </stdio>
     <command><![CDATA[
-        samtools view -T $input1 -bS $input2 > $output1
+        sh /home/ec2-user/galaxy/tools/nanopore_sequencing/last/sam-to-sorted-bam.sh > $output1
     ]]></command>
     <inputs>
 	<param type="data" name="input1" format="fasta" label="reference genome" />
