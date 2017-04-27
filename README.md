@@ -12,4 +12,4 @@ The basecalled fast5 reads could be dowloaded from gigaDB. The basic stats/metri
 ### Tools used
 1. Poretools [GitHub](https://github.com/arq5x/poretools) [Document](http://poretools.readthedocs.io/en/latest/)
 2. LAST aligner [link](http://last.cbrc.jp/)
-3. Test data (999 reads from three flowcells of 46K reads) [link](https://s3.amazonaws.com/ngs2016/ectocooler_subset.zip)
+
