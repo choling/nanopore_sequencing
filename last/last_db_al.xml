@@ -11,7 +11,7 @@
     ]]></command>
     <inputs>
 	<param type="data" name="input1" format="data" label="reference genome" />
-        <param type="data" name="input2" format="fasta,fastq" label="fasta/fastq file" />
+        <param type="data" name="input2" format="fasta" label="fasta file" />
     </inputs>
     <outputs>
         <data name="output1" format="maf" />
