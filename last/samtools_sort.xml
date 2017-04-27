@@ -1,0 +1,50 @@
+<tool id="samtools_sort" name="Samtools SORT" version="0.1.0">
+    <description>Sort alignments by read name</description>
+    <requirements>
+        <requirement type="package">samtools</requirement>
+    </requirements>
+    <stdio>
+        <exit_code range="1:" />
+    </stdio>
+    <version_command>samtools --version | head -1</version_command>
+    <command><![CDATA[
+        samtools sort "$input1" > "$output1"
+    ]]></command>
+    <inputs>
+        <param type="data" name="input1" format="bam" label="bam file" />
+    </inputs>
+    <outputs>
+        <data name="output1" format="bam" />
+    </outputs>
+    <tests>
+        <test>
+            <param name="input1" value="1.bam"/>
+            <output name="output1" file="1_sorted.bam"/>
+        </test>
+    </tests>
+    <help><![CDATA[
+        Usage: samtools sort [options...] [in.bam]
+Options:
+  -l INT     Set compression level, from 0 (uncompressed) to 9 (best)
+  -m INT     Set maximum memory per thread; suffix K/M/G recognized [768M]
+  -n         Sort by read name
+  -o FILE    Write final output to FILE rather than standard output
+  -T PREFIX  Write temporary files to PREFIX.nnnn.bam
+      --input-fmt-option OPT[=VAL]
+               Specify a single input file format option in the form
+               of OPTION or OPTION=VALUE
+  -O, --output-fmt FORMAT[,OPT[=VAL]]...
+               Specify output format (SAM, BAM, CRAM)
+      --output-fmt-option OPT[=VAL]
+               Specify a single output file format option in the form
+               of OPTION or OPTION=VALUE
+      --reference FILE
+               Reference sequence FASTA FILE [null]
+  -@, --threads INT
+               Number of additional threads to use [0]
+
+    ]]></help>
+    <citations>
+        <citation type="doi">10.1093/bioinformatics/btp352</citation>
+    </citations>
+</tool>
