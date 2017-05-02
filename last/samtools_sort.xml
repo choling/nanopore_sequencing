@@ -1,4 +1,4 @@
-<tool id="samtools_sort" name="Samtools SORT" version="0.1.0">
+<tool id="samtools_sort" name="Samtools SORT" version="1.4.0">
     <description>Sort alignments by read name</description>
     <requirements>
         <requirement type="package">samtools</requirement>
