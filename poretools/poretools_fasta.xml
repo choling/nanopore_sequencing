@@ -1,4 +1,4 @@
-<tool id="poretools_fasta" name="Poretools fasta" version="0.1.0">
+<tool id="poretools_fasta" name="Poretools fasta" version="0.6.0">
  <description>fast5 to fasta</description>
     <requirements>
         <requirement type="package" version="0.6.0">poretools</requirement>

@@ -1,0 +1,21 @@
+<tool id="count_align_error" name="Count-align-error" version="0.1.0">
+    <description>Count the alignment error</description>
+    <requirements>
+        <requirement type="package">count-errors.py</requirement>
+    </requirements>
+    <stdio>
+        <exit_code range="1:" />
+    </stdio>
+    <command><![CDATA[
+        python /home/ec2-user/galaxy/tools/nanopore_sequencing/last/count-error.py $input1 > $output1
+    ]]></command>
+    <inputs>
+	<param type="data" name="input1" format="bam" label="sorted bam" />
+    </inputs>
+    <outputs>
+	<data name="output1" format="txt" />
+    </outputs>
+    <help><![CDATA[
+        python count-errors.py input.sorted.bam > error.prfile.txt
+    ]]></help>
+</tool>
